@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/thongtinsanpham.css" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Thêm script Bootstrap vào đây -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Gundam</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://gundamshop.vn/">Giới thiệu</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Thể loại
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/pages/MG1_100.html"
+                    >MG 1/100</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">PG 1/60</a></li>
+                <li><a class="dropdown-item" href="#">RG 1/144</a></li>
+                <li><a class="dropdown-item" href="#">HG 1/144</a></li>
+                <li><a class="dropdown-item" href="#">SD</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0 ml-auto" role="search">
+            <div class="input-group">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <div class="input-group-append">
+                <button
+                  class="btn btn-outline-success my-2 my-sm-0"
+                  type="submit"
+                >
+                  <i class="fas fa-search"></i>
+                  <!-- Search icon -->
+                </button>
+              </div>
+            </div>
+            <div class="input-group">
+              <a href="/pages/products.html" class="ml-2">
+                <i class="fas fa-shopping-cart fa-lg"></i>
+                <!-- Shopping cart icon -->
+              </a>
+              <!-- Phần tử hiển thị số lượng sản phẩm trong giỏ hàng -->
+              <span id="cart-count"></span>
+              <a href="#" class="ml-2">
+                <i class="fas fa-heart fa-lg"></i>
+                <!-- Heart icon -->
+              </a>
+            </div>
+          </form>
+
+          <!-- Thêm phần hiển thị email người dùng đã đăng nhập -->
+          <ul class="navbar-nav ml-auto" id="loginSection">
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/login.html"
+                ><i class="fas fa-sign-in-alt"></i> Đăng nhập</a
+              >
+            </li>
+            <!-- Đăng ký -->
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/register.html"
+                ><i class="fas fa-user-plus"></i> Đăng ký</a
+              >
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto" id="userSection" style="display: none">
+            <!-- Hiển thị email người dùng đã đăng nhập -->
+            <li class="nav-item">
+              <span class="nav-link" id="userEmail"></span>
+            </li>
+            <!-- Đăng xuất -->
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="logout"
+                ><i class="fas fa-sign-out-alt"></i> Đăng xuất</a
+              >
+            </li>
+          </ul>
+          <!-- Kết thúc phần thêm -->
+        </div>
+      </div>
+    </nav>
+
+    <div class="content-container">
+     
+    </div>
+
+    <div class="Footer">
+      <div class="Footer1">
+        <div class="des1">
+          <img class="book" src="/pictures/logo-sm.png" alt="" />
+          <img class="word" src="/pictures/logo-dark.png" alt="" />
+          <p>
+            In an ideal world this text wouldn't exist, a client would
+            <br />acknowledge the importance of having web copy <br />before the
+            design starts.
+          </p>
+          <div class="icon2">
+            <div class="fa fa-facebook"></div>
+            <div id="icon" class="fa fa-twitter"></div>
+            <div id="icon" class="fa fa-github"></div>
+            <div class="fa fa-instagram"></div>
+          </div>
+        </div>
+        <div class="des2">
+          <div class="des2_col1">
+            <h3>Company</h3>
+            <p>Home</p>
+            <p>About</p>
+            <p>services</p>
+          </div>
+          <div class="des2_col2">
+            <h3>Information</h3>
+            <p>Resume</p>
+            <p>Client Say</p>
+            <p>Projects</p>
+          </div>
+          <div class="des2_col3">
+            <h3>More info</h3>
+            <p>Blogs</p>
+            <p>Contact</p>
+            <p>Terms & condition</p>
+          </div>
+        </div>
+      </div>
+      <div class="Footer2">
+        <p>© 2024 Selfown. Created with ❤️ by Mannathemes</p>
+        <p class="Footer2_blue">- Terms & condition <span>*</span></p>
+      </div>
+    </div>
+    <script src="../assets/js/addSp.js"></script>
+    <!-- <script src="../assets/js/index.js"></script> -->
+    <script src="../assets/js/validator.js"></script>
+  </body>
+</html>

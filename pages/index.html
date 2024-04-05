@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/lelinh014756/fui-toast-js@master/assets/css/toast@1.0.1/fuiToast.min.css"
+    />
+  </head>
+  <body>
+    <div id="fui-toast"></div>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          placeholder="Enter your email"
+          autofocus
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter your password"
+        />
+      </div>
+      <button type="submit">Submit form</button>
+    </form>
+
+    <div id="show-info"></div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/lelinh014756/fui-toast-js@master/assets/js/toast@1.0.1/fuiToast.min.js"
+    ></script>
+  </body>
+
+  <style>
+    /* Đặt kiểu chung cho biểu mẫu */
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+
+    /* Đặt kiểu cho các trường nhập liệu */
+    .form-field {
+      margin-bottom: 10px;
+    }
+
+    .form-field label {
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-field input[type="email"],
+    .form-field input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; /* Đảm bảo rằng padding không làm thay đổi kích thước tổng thể */
+    }
+
+    /* Đặt kiểu cho nút gửi */
+    button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #5cb85c;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #4cae4c;
+    }
+  </style>
+  <!-- TI xoa file -->
+  <script>
+    const email = document.querySelector("#email");
+    const password = document.querySelector("#password");
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // console.dir(email); // dir
+    function handleSubmit(event) {
+      event.preventDefault();
+      let isCheck = false;
+      //   Email va password khong duoc de trong, >6 ky tu
+      if (
+        email.value === "" ||
+        email.value.length < 8 ||
+        password.value.length < 8 ||
+        password.value === ""
+      ) {
+        if (email.value.length === 0) {
+          FuiToast.error("Không được để trống email");
+        } else if (email.value.length < 8) {
+          FuiToast.error("Email lớn hơn 8 ký tự");
+        }
+        if (password.value.length === 0) {
+          FuiToast.error("Không được để trống password");
+        } else if (password.value.length < 8) {
+          FuiToast.error("Password lớn hơn 8 ký tự");
+        }
+      } else {
+        for (let i = 0; i < users.length; i++) {
+          if (email.value === users[i].email) isCheck = true;
+        }
+        if (isCheck) FuiToast.error("Email đã tồn tại trong hệ thống");
+        else {
+          users.push({
+            email: email.value,
+            password: password.value,
+          });
+          localStorage.setItem("users", JSON.stringify(users));
+          display();
+          FuiToast.success("Submit form thành công.");
+          event.target.reset(); // reset form sau khi lấy được dữ liệu
+        }
+      }
+    }
+
+    // || tra ve gia tri truthy dau tien:
+    // &&  tra ve gia tri falsy dau tien:
+    // truthy - falsy:
+    // Khi ep kieu boolean 1 bien tra ve false: falsy
+    // 6 gia tri falsy: null - undefined, NaN, 0, "", false
+    // console.log(Boolean([]));
+    // console.log(JSON.parse(localStorage.getItem("users")));
+    // const result2 = "" || false || 5 || 44;
+    // console.log(result2); // 5
+
+    function display() {
+      const showInfo = document.querySelector("#show-info");
+      let result = "";
+
+      for (let i = 0; i < users.length; i++) {
+        result += `
+        <div>
+            ${users[i].email} -  ${users[i].password}
+        </div>
+      `;
+      }
+
+      showInfo.innerHTML = result;
+    }
+    display();
+    // const users = [];
+  </script>
+</html>

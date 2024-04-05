@@ -1,0 +1,86 @@
+/* giohang.css */
+
+.container {
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 20px;
+  /* position: relative; Để có thể điều chỉnh vị trí của logo */
+}
+
+.logo {
+  position: absolute; /* Đặt logo ở vị trí tuyệt đối */
+  top: 20px; /* Khoảng cách từ phía trên */
+  left: 20px; /* Khoảng cách từ phía trái */
+  height: 100px;
+  width: 100px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+}
+
+img{
+  margin-left: -400px;
+  height: 400px;
+  width: 300px;
+}
+
+/* .cart {
+  margin-top: 20px;
+} */
+
+.card {
+  display: flex; /* Sử dụng flexbox */
+  flex-direction: column; /* Chỉ định hướng dọc cho các phần tử con */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-body {
+  
+  padding: 20px;
+  flex-grow: 1; /* Cho phần tử này mở rộng để điền vào không gian còn trống */
+}
+
+.card-title {
+  font-size: 18px;
+}
+
+.card-text {
+  font-size: 14px;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+li{
+  display: flex;
+}
+
+.total-price {
+  position: fixed;
+  color: white;
+  background-color: black; /* Tùy chỉnh màu nền cho phần tổng tiền */
+  padding: 10px; /* Tùy chỉnh độ lớn của padding */
+  border: 1px solid #ccc; /* Tùy chỉnh đường viền */
+  border-radius: 5px; /* Tùy chỉnh bo góc */
+  top: 20px; /* Vị trí từ phía trên */
+  right: 20px; /* Vị trí từ phía bên phải */
+  z-index: 9999; /* Đảm bảo nằm trên các phần tử khác */
+}
+

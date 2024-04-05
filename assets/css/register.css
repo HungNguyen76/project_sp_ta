@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-emphasis-color: white;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.header-login {
+    height: 120px;
+    border-bottom: 1px solid #dadada;
+    align-items: center;
+    display: flex;
+}
+
+.logo img {
+    width: 10%;
+    height: 10%;
+    margin-left: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.register-form {
+    border: 1px solid #e0e0e0;
+    width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.register-form label {
+    font-weight: bold;
+}
+
+.register-form input {
+    outline: none;
+    width: 95%;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border: none;
+    border-bottom: 1px solid #d5d5d5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.register-form button {
+    border: none;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.form-group.invalid .form-control {
+    border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+    color: #f33a58;
+}
+
+.form-message {
+    font-size: 14px;
+    line-height: 1.6rem;
+    padding: 4px 0 0;
+}
+
+.Footer {
+    background-color: #1a1a2e;
+  }
+  .Footer1 {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+  }
+  .book {
+    height: 16px;
+    width: 15px;
+  }
+  .word {
+    width: 61px;
+    height: 15px;
+  }
+  .des1 {
+    padding: 45px;
+    margin-left: 55px;
+  }
+  .des1 p {
+    color: rgb(186, 186, 186);
+    font-size: 10px;
+  }
+  .des2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: nowrap;
+    margin-right: 30px;
+  }
+  .des2 div {
+    width: 30%;
+    margin-left: 80px;
+  }
+  .des2 h3 {
+    font-size: 20px;
+  }
+  .des2 p {
+    color: rgb(186, 186, 186);
+    margin-bottom: 5px;
+    font-size: 10px;
+  }
+  .des2_col2 {
+    padding: 0px 60px;
+  }
+  .Footer2 {
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+  }
+  .Footer2 p {
+    color: rgb(186, 186, 186);
+    margin-left: -140px;
+  }
+  .Footer2 .Footer2_blue {
+    color: rgb(35, 128, 251);
+  }
+  .Footer2 .Footer2_blue span {
+    color: red;
+  }

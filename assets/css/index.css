@@ -1,0 +1,118 @@
+.navbar-nav .nav-link {
+  color: #000000; /* Màu chữ đen */
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Đảm bảo navbar hiển thị trên tất cả các phần khác */
+}
+
+.navbar {
+  z-index: 1000; /* Giả sử navbar có z-index lớn hơn */
+}
+
+.carousel-container {
+  position: relative; /* Đảm bảo carousel có vị trí tương đối */
+  z-index: 1; /* Đặt z-index thấp hơn so với navbar */
+}
+
+.Footer {
+  background-color: #1a1a2e;
+}
+.Footer1 {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+.book {
+  height: 16px;
+  width: 15px;
+}
+.word {
+  width: 61px;
+  height: 15px;
+}
+
+.des p {
+  margin-left: 50px;
+  margin-top: 70px;
+}
+
+.des1 {
+  padding: 45px;
+  margin-left: 55px;
+}
+.des1 p {
+  color: rgb(186, 186, 186);
+  font-size: 10px;
+}
+.des2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: nowrap;
+  margin-right: 30px;
+}
+.des2 div {
+  width: 30%;
+  margin-left: 80px;
+}
+.des2 h3 {
+  font-size: 20px;
+}
+.des2 p {
+  color: rgb(186, 186, 186);
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+.des2_col2 {
+  padding: 0px 60px;
+}
+.Footer2 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 10px;
+}
+.Footer2 p {
+  color: rgb(186, 186, 186);
+  margin-left: -140px;
+}
+.Footer2 .Footer2_blue {
+  color: rgb(35, 128, 251);
+}
+.Footer2 .Footer2_blue span {
+  color: red;
+}
+
+.card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content-container {
+  margin: 15px; 
+
+}
+.container {
+  display: flex;
+  margin: 15px;
+}
+.left {
+  margin: 15px;
+}
+
+.total-price {
+  margin-top: 50px;
+}
